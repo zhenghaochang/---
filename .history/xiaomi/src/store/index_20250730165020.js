@@ -1,0 +1,32 @@
+import {defineStore} from 'pinia'
+
+const user = {
+    id:0,
+    username:'',
+    name:'',
+    numInCart:0,
+    token:''
+}
+
+export const useUserStore = defineStore('userI',{
+    state:()=>({
+        id:0,
+        username:'',
+        name:'',
+        numInCart:0,
+        token:''
+    }),
+    getters:{},
+    actions:{
+        changeInfo(user){
+            this.id = user.id,
+            this.username = user.username,
+            this.name = user.name,
+            this.numInCart = user.numInCart,
+            this.token = user.token
+        }
+    },
+    persist: true    
+}
+)
+

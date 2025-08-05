@@ -1,0 +1,42 @@
+<script setup>
+
+</script>
+
+<template>
+    <div class="base_div">
+        <div>
+            <el-menu
+                :default-active="activeIndex"
+                class="el-menu-demo"
+                mode="horizontal"
+                @select="handleSelect"
+                style="width:80%"
+            >
+                <el-menu-item index="1">Processing Center</el-menu-item>
+                <el-sub-menu index="2">
+                <template #title>Workspace</template>
+                <el-menu-item index="2-1">item one</el-menu-item>
+                <el-menu-item index="2-2">item two</el-menu-item>
+                <el-menu-item index="2-3">item three</el-menu-item>
+                <el-sub-menu index="2-4">
+                    <template #title>item four</template>
+                    <el-menu-item index="2-4-1">item one</el-menu-item>
+                    <el-menu-item index="2-4-2">item two</el-menu-item>
+                    <el-menu-item index="2-4-3">item three</el-menu-item>
+                </el-sub-menu>
+                </el-sub-menu>
+                <el-menu-item index="3" disabled>Info</el-menu-item>
+                <el-menu-item index="4">Orders</el-menu-item>
+            </el-menu>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.base_div{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+</style>
